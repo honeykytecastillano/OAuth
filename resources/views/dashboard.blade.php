@@ -4,8 +4,8 @@
     <title>Dashboard</title>
     <style>
           body {
-            background-color: #30c996;
-            font-family: Arial, sans-serif;
+            background-color: #142F43;
+            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -28,9 +28,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome,{{ $user->name }}!</h1>
-
-        <p>This is your dashboard.</p>
+        <h1>Welcome, {{ $user->name }}!</h1>
 
         <p><img src="{{ $user->avatar }}" alt="Avatar"></p>
         <p><strong>Google ID:</strong> {{ $user->id }}</p>

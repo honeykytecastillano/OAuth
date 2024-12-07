@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     
-  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
     <style>
         body {
-            background-color: #30c996;
-            font-family: Arial, sans-serif;
+            background-color: #142F43;
+            font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -43,6 +46,7 @@
             text-align: left;
             font-size: 14px;
             color: #555;
+            color: #1B1833;
         }
 
         input {
@@ -70,7 +74,7 @@
         }
 
         button[type="submit"] {
-            background-color:#1abd87;
+            background-color:#112a3d;
             color: white;
             padding: 12px;
             border: none;
@@ -135,13 +139,21 @@
             padding-top: 0px;
             padding-bottom: 0px;
             }
+        
+        .text {
+            color:#1B1833;
+        }
+
+        i {
+            padding-right: 10px
+        }
 
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Login</h1>
+        <h1 class="text">Login</h1>
 
         <!-- Error messages display -->
         @if ($errors->any())
@@ -166,8 +178,12 @@
         </form>
         
         <h5>Or</h5>
-        
-            <a href="{{ route('google.redirect') }}"><button type="submit"><i class="fa-google"></i>Login with Google</button></a>
+        <div>
+            <a href="{{ route('google.redirect') }}">
+                <button type="submit">
+                    <i class="fab fa-google"></i>Login with Google
+                </button>
+            </a>
         </div>
     </div>
 
